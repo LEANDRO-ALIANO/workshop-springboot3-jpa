@@ -13,7 +13,7 @@ import com.educandoweb.course.entities.Category;
 import com.educandoweb.course.services.CategoryService;
 
 @RestController
-@RequestMapping(value="category")
+@RequestMapping(value="categories")
 /**
  * estou informando que é um controlador rest
  */
