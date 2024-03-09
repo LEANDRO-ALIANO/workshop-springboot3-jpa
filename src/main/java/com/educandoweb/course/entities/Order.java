@@ -24,6 +24,8 @@ private Long id;
 private Instant moment;
 
 private Integer orderStatus;
+@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+private Payment payment;
 
 @ManyToOne
 @JoinColumn(name= "client_id")
@@ -91,7 +93,16 @@ public void setClient(User client) {
 	this.client = client;
 }
 
+
 	public Set<OrderItem> getItems() {
 		return items;
+	}
+
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
 	}
 }
